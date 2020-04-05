@@ -18,3 +18,5 @@ In changes to the main.dart file, i've added the navigation to the second screen
 
 21:25 Added functionality required to navigate between all screens]
 
+4/4/2020: [Added remove functionality to outcome screen and cleaned up the UI, added globals.dart, updated pubspec.lock and pubspec.yaml]
+
