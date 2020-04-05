@@ -84,6 +84,8 @@ class SecondScreen extends StatefulWidget {
 //This screen will display the outcomes
 
 class OutcomeScreen extends State<SecondScreen> {
+
+
   final TextStyle _titleFont = const TextStyle(fontSize: 20.0);
   static StreamController<void> buttonPressStream = StreamController<bool>.broadcast();
   final OutcomeBuilder outcomes = new OutcomeBuilder(buttonPressStream);
@@ -93,6 +95,7 @@ class OutcomeScreen extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
 
+
    return new Scaffold(
        body: new LayoutBuilder(builder: (context, constraint) {
 
@@ -100,10 +103,12 @@ class OutcomeScreen extends State<SecondScreen> {
 
         return new Center(
 
+
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
            new Container(
+
              padding: EdgeInsets.all(30.0),
            height: _maxHeight,
            child: outcomes,
@@ -111,20 +116,23 @@ class OutcomeScreen extends State<SecondScreen> {
          ),
         );
        }),
-
      bottomNavigationBar: BottomAppBar(
        shape: const CircularNotchedRectangle(),
        child: Container(height: 50.0,),
      ),
 
+
      floatingActionButton: FloatingActionButton(
        onPressed: () => buttonPressStream.add(null),
+
        tooltip: 'Increment Counter',
        backgroundColor: Colors.purple,
        child: Icon(Icons.add),
      ),
 
+
      floatingActionButtonLocation:FloatingActionButtonLocation.centerDocked,
+
 
      appBar: AppBar(
        title: Text('Possible Outcomes',
@@ -138,6 +146,7 @@ class OutcomeScreen extends State<SecondScreen> {
 
 
   }
+
 
 
 
@@ -234,6 +243,7 @@ class OutcomeOption extends StatelessWidget {
        ]));
   }
 }
+
 
 
 //Creates the Goodness Screen class
